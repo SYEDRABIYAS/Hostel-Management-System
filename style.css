@@ -1,0 +1,869 @@
+/* =========================================
+   HOSTEL MANAGEMENT - MILD INDIGO THEME
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+
+    color: #25264a;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 5% 5%,
+            #e9e7ff 0%,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 95% 15%,
+            #f2eaff 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            #eeeaff 0%,
+            transparent 35%
+        ),
+        #f8f7ff;
+}
+
+
+/* ================= TOP HEADER ================= */
+
+.top-header {
+    height: 78px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            110deg,
+            #eef0ff,
+            #f4efff,
+            #f8f1ff
+        );
+
+    border-bottom: 1px solid #dedbfa;
+
+    box-shadow:
+        0 5px 20px rgba(79, 70, 229, 0.08);
+
+    position: relative;
+}
+
+
+/* subtle bottom line */
+
+.top-header::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 8%;
+
+    width: 84%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #818cf8,
+            #a78bfa,
+            #c084fc,
+            transparent
+        );
+}
+
+
+/* ================= HEADER TEXT ================= */
+
+.top-header h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    color: #37358f;
+
+    letter-spacing: 0.3px;
+}
+
+.top-header p {
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #8583a8;
+}
+
+
+/* ================= HOME BUTTON ================= */
+
+.home-btn {
+
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    color: #5149b9;
+
+    background: #ffffff;
+
+    border: 1px solid #dcd9f6;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.home-btn:hover {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366d9,
+            #8b78df
+        );
+
+    border-color: transparent;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(99, 102, 241, 0.20);
+}
+
+
+/* ================= PAGE TITLE ================= */
+
+.page-title {
+
+    width: 86%;
+    max-width: 1150px;
+
+    margin: 42px auto 28px;
+}
+
+.page-title::before {
+
+    content: "HOSTEL MANAGEMENT";
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #7772ce;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.page-title h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    color: #37358f;
+}
+
+.page-title p {
+
+    margin-top: 7px;
+
+    color: #8587a4;
+
+    font-size: 14px;
+}
+
+
+/* ================= MAIN ================= */
+
+.student-container {
+
+    width: 86%;
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+
+/* ================= CARDS ================= */
+
+.form-card,
+.list-card {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.96),
+            rgba(248,247,255,0.96)
+        );
+
+    border: 1px solid #e3e1f5;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    margin-bottom: 23px;
+
+    box-shadow:
+        0 8px 25px rgba(79, 70, 229, 0.07);
+
+    transition: 0.3s ease;
+
+    overflow: hidden;
+}
+
+
+/* soft decorative glow */
+
+.form-card::after,
+.list-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    right: -60px;
+    top: -60px;
+
+    background: #dcd7ff;
+
+    border-radius: 50%;
+
+    filter: blur(25px);
+
+    opacity: 0.5;
+}
+
+.form-card:hover,
+.list-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #cbc7f3;
+
+    box-shadow:
+        0 14px 35px rgba(79, 70, 229, 0.11);
+}
+
+
+/* ================= CARD TITLE ================= */
+
+.card-title {
+
+    margin-bottom: 23px;
+
+    padding-left: 15px;
+
+    position: relative;
+}
+
+.card-title::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 1px;
+
+    width: 4px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            #6366d9,
+            #a78bfa
+        );
+}
+
+.card-title h2,
+.list-header h2 {
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    color: #37375f;
+}
+
+.card-title p,
+.list-header p {
+
+    margin-top: 5px;
+
+    color: #9292ad;
+
+    font-size: 12px;
+}
+
+
+/* ================= FORM GRID ================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 19px;
+}
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.input-group.full {
+
+    grid-column: 1 / 4;
+}
+
+
+/* ================= LABEL ================= */
+
+.input-group label {
+
+    margin-bottom: 7px;
+
+    color: #62618b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* ================= INPUT ================= */
+
+.input-group input,
+.input-group select {
+
+    height: 44px;
+
+    padding: 0 13px;
+
+    outline: none;
+
+    color: #46456a;
+
+    background: #fcfbff;
+
+    border: 1px solid #dfdef0;
+
+    border-radius: 9px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    transition: 0.25s ease;
+}
+
+.input-group input::placeholder {
+
+    color: #aaa9bd;
+}
+
+.input-group input:hover,
+.input-group select:hover {
+
+    border-color: #b9b4ea;
+
+    background: #ffffff;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+
+    border-color: #7771d6;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(119, 113, 214, 0.10);
+}
+
+
+/* ================= ADD BUTTON ================= */
+
+.add-btn {
+
+    margin-top: 22px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    font-family: "DM Sans", sans-serif;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b5fc7,
+            #756ed6,
+            #8f78d8
+        );
+
+    box-shadow:
+        0 7px 17px rgba(91, 95, 199, 0.20);
+
+    transition: 0.3s ease;
+}
+
+.add-btn:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #5054b8,
+            #6c64c9,
+            #846dca
+        );
+
+    box-shadow:
+        0 10px 23px rgba(91, 95, 199, 0.28);
+}
+
+.add-btn:active {
+
+    transform: scale(0.97);
+}
+
+
+/* ================= LIST HEADER ================= */
+
+.list-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= VIEW BUTTON ================= */
+
+.view-btn {
+
+    padding: 9px 16px;
+
+    border-radius: 9px;
+
+    color: #605ab7;
+
+    background:
+        #f0efff;
+
+    border: 1px solid #d9d6f5;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.view-btn:hover {
+
+    color: #4b47a0;
+
+    background:
+        #e6e3ff;
+
+    border-color: #c6c1ef;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= TABLE ================= */
+
+.student-table-container {
+
+    overflow-x: auto;
+
+    border-radius: 12px;
+
+    border: 1px solid #e7e5f2;
+}
+
+.student-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+
+/* TABLE HEADER */
+
+.student-table th {
+
+    padding: 14px;
+
+    text-align: left;
+
+    color: #56549a;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #eeedff,
+            #f4efff
+        );
+
+    border-bottom: 1px solid #dddaf4;
+}
+
+
+/* TABLE DATA */
+
+.student-table td {
+
+    padding: 14px;
+
+    color: #686982;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeF6;
+
+    transition: 0.2s ease;
+}
+
+.student-table tr:hover td {
+
+    background: #f8f6ff;
+
+    color: #4c4b72;
+}
+
+
+/* ================= ROOM BADGE ================= */
+
+.room-badge {
+
+    display: inline-block;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    color: #655bb9;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eeeaff,
+            #f5edff
+        );
+
+    border: 1px solid #ddd5f5;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* ================= STATUS BADGES ================= */
+
+.status-badge {
+
+    display: inline-block;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.status-paid {
+
+    color: #3d8760;
+
+    background: #eaf8ef;
+
+    border: 1px solid #ccebd8;
+}
+
+.status-pending {
+
+    color: #a57728;
+
+    background: #fff7df;
+
+    border: 1px solid #f3e3b4;
+}
+
+.status-available {
+
+    color: #4e71a5;
+
+    background: #edf5ff;
+
+    border: 1px solid #d5e6fa;
+}
+
+.status-occupied {
+
+    color: #a65d67;
+
+    background: #fff0f2;
+
+    border: 1px solid #f4d5da;
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty-message {
+
+    text-align: center;
+
+    padding: 35px;
+
+    color: #a1a0b4;
+
+    font-size: 13px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    margin-top: 55px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #8887a2;
+
+    font-size: 11px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #efeeff,
+            #f7f0ff,
+            #efeeff
+        );
+
+    border-top: 1px solid #dfdcf3;
+}
+
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+
+    width: 7px;
+
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #f0eff7;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            #7771d6,
+            #a78bfa
+        );
+
+    border-radius: 20px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .top-header {
+
+        padding: 0 20px;
+    }
+
+    .top-header h1 {
+
+        font-size: 20px;
+    }
+
+    .student-container,
+    .page-title {
+
+        width: 92%;
+    }
+
+    .page-title h2 {
+
+        font-size: 29px;
+    }
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .input-group.full {
+
+        grid-column: 1;
+    }
+
+    .list-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+    }
+
+    .form-card,
+    .list-card {
+
+        padding: 21px;
+    }
+
+    .student-table {
+
+        min-width: 700px;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .top-header {
+
+        padding: 0 15px;
+
+        height: 72px;
+    }
+
+    .top-header h1 {
+
+        font-size: 17px;
+    }
+
+    .top-header p {
+
+        display: none;
+    }
+
+    .home-btn {
+
+        padding: 8px 13px;
+
+        font-size: 11px;
+    }
+
+    .page-title {
+
+        margin-top: 32px;
+    }
+
+    .page-title h2 {
+
+        font-size: 25px;
+    }
+
+    .page-title::before {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+    .form-card,
+    .list-card {
+
+        padding: 17px;
+
+        border-radius: 15px;
+    }
+
+    .add-btn,
+    .view-btn {
+
+        width: 100%;
+    }
+}
